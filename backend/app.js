@@ -7,7 +7,7 @@ apostrophe({
   baseUrl: 'http://localhost:4321',
   // The base URL when static building the Astro frontend.
   // Overridden by APOS_STATIC_BASE_URL
-  staticBaseUrl: 'http://static.localhost:4000',
+  staticBaseUrl: 'http://localhost:4321',
   // URL path prefix for non-root hosting (e.g. GitHub Pages).
   prefix: process.env.APOS_PREFIX || '',
   modules: {

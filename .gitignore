@@ -1,5 +1,13 @@
+# Dependencies
 package-lock.json
-/node_modules
+node_modules/
 .DS_Store
+
+# AI/editor
 .ai
+.claude
 CLAUDE.md
+
+# Secrets (belt-and-suspenders, also in subdirs)
+.env
+backend/local.js
