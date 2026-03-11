@@ -1,0 +1,8 @@
+{
+  "build": {
+    "installCommand": "pnpm install --no-frozen-lockfile"
+  },
+  "deploy": {
+    "startCommand": "node app.js"
+  }
+}
