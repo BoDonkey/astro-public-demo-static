@@ -2,7 +2,7 @@ import apostrophe from 'apostrophe';
 
 apostrophe({
   root: import.meta,
-  shortName: 'astro-public-demo',
+  shortName: 'astro-public-demo-static',
   // Overridden by APOS_BASE_URL
   baseUrl: 'http://localhost:4321',
   // The base URL when static building the Astro frontend.

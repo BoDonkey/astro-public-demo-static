@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - esbuild
+  - eslint-config-apostrophe
+  - sharp
+  - vue-demi
