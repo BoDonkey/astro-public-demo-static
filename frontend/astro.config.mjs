@@ -11,12 +11,12 @@ export default defineConfig({
   server: {
     port: process.env.PORT ? parseInt(process.env.PORT) : 4321,
     // Required for some hosting, like Heroku
-    // host: true
+    host: process.env.HOST || false
   },
   adapter: isStatic ? undefined : node({ mode: 'standalone' }),
   integrations: [
     apostrophe({
-      aposHost: 'http://localhost:3000',
+      aposHost: process.env.APOS_HOST || 'http://localhost:3000',
       widgetsMapping: './src/widgets',
       templatesMapping: './src/templates',
       includeResponseHeaders: [
