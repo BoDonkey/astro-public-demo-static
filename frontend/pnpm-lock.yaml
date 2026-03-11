@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@apostrophecms/apostrophe-astro':
-        specifier: github:apostrophecms/apostrophe#main&path:packages/apostrophe-astro
-        version: https://codeload.github.com/apostrophecms/apostrophe/tar.gz/d61f34264dd15440e550ce24fb1bca36381b6e19#path:packages/apostrophe-astro
+        specifier: file:../vendor/apostrophecms-apostrophe-astro-1.9.0.tgz
+        version: file:../vendor/apostrophecms-apostrophe-astro-1.9.0.tgz
       '@astrojs/node':
         specifier: ^9.4.3
         version: 9.5.4(astro@5.18.0(rollup@4.59.0)(sass@1.97.3)(typescript@5.9.3))
@@ -35,8 +35,8 @@ importers:
 
 packages:
 
-  '@apostrophecms/apostrophe-astro@https://codeload.github.com/apostrophecms/apostrophe/tar.gz/d61f34264dd15440e550ce24fb1bca36381b6e19#path:packages/apostrophe-astro':
-    resolution: {path: packages/apostrophe-astro, tarball: https://codeload.github.com/apostrophecms/apostrophe/tar.gz/d61f34264dd15440e550ce24fb1bca36381b6e19}
+  '@apostrophecms/apostrophe-astro@file:../vendor/apostrophecms-apostrophe-astro-1.9.0.tgz':
+    resolution: {integrity: sha512-biAy2d/CzALG7of0CXtQSUO73flerHuZ3/fYbFYAE7x7m9enrMVZK+Fva2RFkx9LP1BqEB6JkJRljgfVvWg99A==, tarball: file:../vendor/apostrophecms-apostrophe-astro-1.9.0.tgz}
     version: 1.9.0
 
   '@astrojs/compiler@2.13.1':
@@ -1970,7 +1970,7 @@ packages:
 
 snapshots:
 
-  '@apostrophecms/apostrophe-astro@https://codeload.github.com/apostrophecms/apostrophe/tar.gz/d61f34264dd15440e550ce24fb1bca36381b6e19#path:packages/apostrophe-astro':
+  '@apostrophecms/apostrophe-astro@file:../vendor/apostrophecms-apostrophe-astro-1.9.0.tgz':
     dependencies:
       lodash.deburr: 4.1.0
       sluggo: 1.0.0
