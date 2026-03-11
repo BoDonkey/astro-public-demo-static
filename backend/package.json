@@ -25,7 +25,7 @@
     "@apostrophecms/seo": "^1.2.3",
     "@apostrophecms/sitemap": "^1.2.0",
     "@apostrophecms/vite": "^1.1.0",
-    "apostrophe": "file:../vendor/apostrophe-4.27.1.tgz",
+    "apostrophe": "file:./vendor/apostrophe-4.27.1.tgz",
     "cross-env": "^10.1.0",
     "klona": "^2.0.6"
   },
