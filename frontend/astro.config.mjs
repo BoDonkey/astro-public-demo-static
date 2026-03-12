@@ -1,7 +1,10 @@
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
+import vercel from '@astrojs/vercel';
 import apostrophe from '@apostrophecms/apostrophe-astro';
+
 const isStatic = process.env.APOS_BUILD === 'static';
+const isVercel = process.env.ASTRO_ADAPTER === 'vercel';
 
 export default defineConfig({
   output: isStatic ? 'static' : 'server',
@@ -13,7 +16,7 @@ export default defineConfig({
     // Required for some hosting, like Heroku
     host: process.env.HOST || false
   },
-  adapter: isStatic ? undefined : node({ mode: 'standalone' }),
+  adapter: isStatic ? undefined : (isVercel ? vercel() : node({ mode: 'standalone' })),
   integrations: [
     apostrophe({
       aposHost: process.env.APOS_HOST || 'http://localhost:3000',
@@ -28,7 +31,11 @@ export default defineConfig({
       ],
       excludeRequestHeaders: [
         // Must exclude this for separate apostrophe and astro hosting to work
-        // 'host'
+        'host'
+      ],
+      proxyRoutes: [
+        '/logout',
+        '/[locale]/logout'
       ]
     })
   ],
